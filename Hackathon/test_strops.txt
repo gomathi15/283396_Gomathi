@@ -1,0 +1,52 @@
+Microsoft Windows [Version 10.0.26100.3476]
+(c) Microsoft Corporation. All rights reserved.
+
+(testenv) C:\Users\283396\Desktop\Python_training>cd C:\Users\283396\Desktop\Python_training\vs_code_python\package1
+
+(testenv) C:\Users\283396\Desktop\Python_training\vs_code_python\package1>pip install .
+Processing c:\users\283396\desktop\python_training\vs_code_python\package1
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Building wheels for collected packages: subpackage1
+  Building wheel for subpackage1 (pyproject.toml) ... done
+  Created wheel for subpackage1: filename=subpackage1-0.1-py3-none-any.whl size=1978 sha256=6ff8b7ebdcb943d93599e13d5f1d5fd3a6bdcfab05841395d9724a080defdd6d
+  Stored in directory: C:\Users\283396\AppData\Local\Temp\pip-ephem-wheel-cache-riiu9p62\wheels\5b\ed\10\7531a4a4b71b2181057c86b6f4bfdeec172d99d95af47cb50b
+Successfully built subpackage1
+Installing collected packages: subpackage1
+  Attempting uninstall: subpackage1
+    Found existing installation: subpackage1 0.1
+    Uninstalling subpackage1-0.1:
+      Successfully uninstalled subpackage1-0.1
+Successfully installed subpackage1-0.1
+
+(testenv) C:\Users\283396\Desktop\Python_training\vs_code_python\package1>python
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import subpackage1
+Traceback (most recent call last):
+  File "<python-input-0>", line 1, in <module>
+    import subpackage1
+  File "C:\Users\283396\Desktop\Python_training\vs_code_python\package1\subpackage1\__init__.py", line 1, in <module>      
+    from .strops import getspan,titlecase,charactermap,punctuation,permutations,countwords,reversewords,spaces,transform   
+ImportError: cannot import name 'titlecase' from 'subpackage1.strops' (C:\Users\283396\Desktop\Python_training\vs_code_python\package1\subpackage1\strops.py)
+>>> import subpackage1
+>>> subpackage1.getspan('mississipi','ss')
+(2, [(2, 4), (5, 7)])
+>>> subpackage1.reverseword('papa gomathi')
+'ihtamog apap'
+>>> subpackage1.remove_punctuation('papa! gomathi#&')
+'papa gomathi'
+>>> subpackage1.count_words('papa gomathi goms')
+3
+>>> subpackage1.charactermap('mississipi')
+{'m': 1, 'i': 4, 's': 4, 'p': 1}
+>>> subpackage1.maketitle('girls dream big')
+'Girls Dream Big'
+>>> subpackage1.normalize_space('toppers   first rank   is best')
+'toppers first rank is best'
+>>> subpackage1.transform_string('papa gomathi dear')
+'RAED IHTAMOG APAP'
+>>> subpackage1.permut('abc')
+['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+>>> 

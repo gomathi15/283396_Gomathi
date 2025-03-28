@@ -1,0 +1,1 @@
+from .strops import getspan,reverseword,remove_punctuation,count_words,charactermap,maketitle,normalize_space,transform_string,permut
